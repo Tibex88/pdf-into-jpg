@@ -1,9 +1,12 @@
 #!/usr/bin/env node
-import { exportImagesEvents } from './index.js'
+
+import {
+  exportImagesEvents
+} from './index.js'
 const args = process.argv.slice(2)
 const [file, dir = '.'] = args
 
-const help = `Usage: pdf-export-images <file> [dir]
+const help = `Usage: pdf-into-jpg <file> [dir]
 
 Exports images from a PDF file to disk.
 
@@ -22,7 +25,11 @@ if (args.includes('-h') || args.includes('--help')) {
 } else {
   exportImagesEvents(file, dir)
     .on('load', event => console.log('Exporting images from', event.pageCount, 'pages...'))
-    .on('image', ({ file, width, height }) => console.log(file, `(${width}x${height})`))
+    .on('image', ({
+      file,
+      width,
+      height
+    }) => console.log(file, `(${width}x${height})`))
     .on('done', images => console.log(images.length, 'images exported'))
     .catch(console.error)
 }
