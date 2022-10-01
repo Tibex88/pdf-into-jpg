@@ -1,0 +1,29 @@
+{
+  "name": "pdf-into-jpg",
+  "version": "1.0.9",
+  "description": "exports images from a pdf file to disk via CLI",
+  "main": "index.js",
+  "type": "module",
+  "bin": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pdf",
+    "image",
+    "extract",
+    "export",
+    "cli",
+    "png"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "tibebe solomon <tibesolomon7@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "pdfjs-dist": "^2.12.313",
+    "sharp": "^0.29.3"
+  }
+}
