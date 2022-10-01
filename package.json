@@ -1,6 +1,6 @@
 {
   "name": "pdf-into-jpg",
-  "version": "1.0.9",
+  "version": "1.0.0",
   "description": "exports images from a pdf file to disk via CLI",
   "main": "index.js",
   "type": "module",
